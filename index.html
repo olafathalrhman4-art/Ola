@@ -1,0 +1,66 @@
+HTML
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>المؤسسة التعليمية</title>
+
+<style>
+body{
+    font-family: Arial;
+    direction: rtl;
+    text-align: center;
+    background: #f4f4f4;
+}
+
+header{
+    background: #0077cc;
+    color: white;
+    padding: 20px;
+}
+
+nav a{
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container{
+    margin-top: 50px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>المؤسسة التعليمية</h1>
+
+    <nav>
+        <a href="index.html">الرئيسية</a>
+        <a href="about.html">نبذة عنا</a>
+        <a href="services.html">أعمالنا</a>
+        <a href="math.html">العمليات الحسابية</a>
+        <a href="contact.html">تواصل معنا</a>
+    </nav>
+</header>
+
+<div class="container">
+    <h2 id="welcome"></h2>
+
+    <p>
+        مرحباً بكم في موقع المؤسسة التعليمية
+    </p>
+</div>
+
+<script>
+let name = prompt("ادخل اسمك");
+
+document.getElementById("welcome").innerHTML =
+"أهلاً وسهلاً يا " + name;
+</script>
+
+</body>
+</html>

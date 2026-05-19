@@ -1,0 +1,99 @@
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>العمليات الحسابية</title>
+
+<style>
+body{
+    font-family: Arial;
+    direction: rtl;
+    text-align: center;
+    background: #fafafa;
+}
+
+input{
+    padding: 10px;
+    margin: 5px;
+}
+
+button{
+    padding: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>العمليات الحسابية</h1>
+
+<!-- مساحة الدائرة -->
+<h2>حساب مساحة الدائرة</h2>
+
+<input type="number" id="radius" placeholder="ادخل نصف القطر">
+
+<button onclick="circleArea()">احسب</button>
+
+<p id="areaResult"></p>
+
+<hr>
+
+<!-- حجم الأسطوانة -->
+<h2>حساب حجم الأسطوانة</h2>
+
+<input type="number" id="r" placeholder="نصف القطر">
+<input type="number" id="h" placeholder="الارتفاع">
+
+<button onclick="cylinderVolume()">احسب</button>
+
+<p id="volumeResult"></p>
+
+<hr>
+
+<!-- معادلات الدرجة الثالثة -->
+<h2>حل معادلة من الدرجة الثالثة</h2>
+
+<p>ax³ + bx² + cx + d = 0</p>
+
+<input type="number" id="a" placeholder="a">
+<input type="number" id="b" placeholder="b">
+<input type="number" id="c" placeholder="c">
+<input type="number" id="d" placeholder="d">
+
+<button onclick="solveEquation()">حل</button>
+
+<p id="equationResult"></p>
+
+<script>
+
+function circleArea(){
+    let r = document.getElementById("radius").value;
+
+    let area = Math.PI * r * r;
+
+    document.getElementById("areaResult").innerHTML =
+    "مساحة الدائرة = " + area.toFixed(2);
+}
+
+function cylinderVolume(){
+
+    let r = document.getElementById("r").value;
+    let h = document.getElementById("h").value;
+
+    let volume = Math.PI * r * r * h;
+
+    document.getElementById("volumeResult").innerHTML =
+    "حجم الأسطوانة = " + volume.toFixed(2);
+}
+
+function solveEquation(){
+
+    document.getElementById("equationResult").innerHTML =
+    "تم إدخال المعادلة بنجاح";
+}
+
+</script>
+
+<a href="index.html">العودة للرئيسية</a>
+
+</body>
+</html>
